@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CogniPlan – Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h2> Smart Study Planner</h2>
+
+<div class="form">
+  <input id="topic" placeholder="Topic name" />
+  <input id="difficulty" type="number" min="1" max="10" placeholder="Difficulty (1–10)" />
+  <input id="confidence" type="number" min="1" max="10" placeholder="Confidence (1–10)" />
+  <input id="deadline" type="number" placeholder="Days until deadline" />
+
+  <button onclick="addTopic()">Add Topic</button>
+</div>
+
+<button class="primary" onclick="generatePlan()">Generate Plan</button>
+
+<pre id="output"></pre>
+
+<script src="app.js"></script>
+</body>
+</html>

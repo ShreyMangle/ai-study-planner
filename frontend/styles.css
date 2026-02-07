@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #020617;
+}
+
+.hero {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.battery {
+  background: #334155;
+  height: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#battery-fill {
+  height: 100%;
+  width: 70%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.form input {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #3b82f6;
+  color: white;
+  border: none;
+}

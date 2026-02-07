@@ -9,21 +9,18 @@ venv/
 .env/
 .venv/
 
-# ===== Flask =====
-instance/
-.webassets-cache/
+# ===== FastAPI / Uvicorn =====
+*.log
 
-# ===== OS Files =====
+# ===== Frontend / JS =====
+node_modules/
+dist/
+
+# ===== OS =====
 .DS_Store
 Thumbs.db
 
-# ===== Logs =====
-*.log
-
-# ===== IDE / Editor =====
+# ===== Editor =====
 .vscode/
 .idea/
 *.swp
-
-# ===== Test / Build Artifacts =====
-.pytest_cache/

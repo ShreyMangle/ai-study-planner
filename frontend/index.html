@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Free AI Study Planner</title>
+  <meta charset="UTF-8" />
+  <title>CogniPlan</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<h1>🤖 Free AI Adaptive Study Planner</h1>
-<button onclick="generate()">Generate Study Plan</button>
+<header class="navbar">
+  <h1>🧠 CogniPlan</h1>
+  <nav>
+    <a href="planner.html">Planner</a>
+    <a href="focus.html">Focus Mode</a>
+  </nav>
+</header>
 
-<pre id="output"></pre>
+<section class="hero">
+  <h2>Plan for your brain, not your calendar</h2>
+  <p>An adaptive study planner built on cognitive science.</p>
+</section>
 
-<script>
-async function generate() {
-  const response = await fetch("http://127.0.0.1:5000/generate-plan", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      daily_hours: 4,
-      learning_pace: "medium",
-      subjects: [
-        {name: "Operating Systems", difficulty: 5, deadline_days: 6},
-        {name: "DBMS", difficulty: 3, deadline_days: 10},
-        {name: "DSA", difficulty: 4, deadline_days: 8}
-      ]
-    })
-  });
+<section class="dashboard">
+  <h3>Today's Cognitive Battery</h3>
+  <div class="battery">
+    <div id="battery-fill"></div>
+  </div>
 
-  const data = await response.json();
-  document.getElementById("output").textContent =
-    JSON.stringify(data, null, 2);
-}
-</script>
+  <h3>Urgent Topics</h3>
+  <ul id="urgent-list"></ul>
+</section>
 
+<script src="app.js"></script>
 </body>
 </html>
