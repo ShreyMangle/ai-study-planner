@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free AI Study Planner</title>
+</head>
+<body>
+
+<h1>🤖 Free AI Adaptive Study Planner</h1>
+<button onclick="generate()">Generate Study Plan</button>
+
+<pre id="output"></pre>
+
+<script>
+async function generate() {
+  const response = await fetch("http://127.0.0.1:5000/generate-plan", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      daily_hours: 4,
+      learning_pace: "medium",
+      subjects: [
+        {name: "Operating Systems", difficulty: 5, deadline_days: 6},
+        {name: "DBMS", difficulty: 3, deadline_days: 10},
+        {name: "DSA", difficulty: 4, deadline_days: 8}
+      ]
+    })
+  });
+
+  const data = await response.json();
+  document.getElementById("output").textContent =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
